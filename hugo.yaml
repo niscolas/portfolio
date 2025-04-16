@@ -3,13 +3,16 @@ languageCode: en-us
 title: Nícolas Parreiras Portfolio
 theme: ["hugo-noir"]
 
+caches:
+  images:
+    dir: :cacheDir/images
+
 params:
   name: "Nícolas Parreiras"
   location: "Contagem, Brazil"
   description: "Versatile Unity Gameplay Engineer with 5+ years of experience in game development, specializing in Gameplay and UI for Unity/Unreal. Skilled in tooling, Game AI, Testing/Automation, and Linux, with foundational knowledge in Game Art/Tech Art to bridge disciplines and deliver polished, visually stunning results."
   profile_image: "/images/profile.jpg"
 
-  # Social Media Links
   email: "niscolas@proton.me"
   github: "https://github.com/niscolas"
   linkedin: "https://www.linkedin.com/in/niscolas/"
@@ -19,27 +22,125 @@ params:
     github: "https://github.com/niscolas"
     linkedin: "https://www.linkedin.com/in/niscolas/"
 
+  techStack:
+    scrollDuration: "30s"
+    forwardTotalSets: 2
+    reverseTotalSets: 1
+
+    forward:
+      - name: "Unity"
+        icon: "si si-unity"
+      - name: "C#"
+        icon: "devicon-csharp-plain"
+      - name: "Unreal"
+        icon: "si si-unrealengine"
+      - name: "C++"
+        icon: "si si-cplusplus"
+      - name: "Godot"
+        icon: "si si-godotengine"
+      - name: "Nix"
+        icon: "si si-nixos"
+      - name: "Linux"
+        icon: "si si-linux"
+      - name: "Git"
+        icon: "si si-git"
+      - name: "Lua"
+        icon: "si si-lua"
+
+    reverse:
+      - name: "Rider"
+        icon: "si si-rider"
+      - name: "Neovim"
+        icon: "si si-neovim"
+
+      - name: "Bash"
+        icon: "si si-gnubash"
+
+      - name: "GitHub"
+        icon: "si si-github"
+      - name: "GitLab"
+        icon: "si si-gitlab"
+
+      - name: "OpenAI"
+        icon: "si si-openai"
+      - name: "Copilot"
+        icon: "si si-githubcopilot"
+      - name: "Anthropic"
+        icon: "si si-anthropic"
+      - name: "Ollama"
+        icon: "si si-ollama"
+      - name: "Codeium"
+        icon: "si si-codeium"
+
+      - name: "Docker"
+        icon: "si si-docker"
+      - name: "Podman"
+        icon: "si si-podman"
+
+      - name: "Hugo"
+        icon: "si si-hugo"
+      - name: "Tailwind CSS"
+        icon: "si si-tailwindcss"
+      - name: "CSS"
+        icon: "si si-css"
+      - name: "HTML"
+        icon: "si si-html5"
+
+      - name: "Notion"
+        icon: "si si-notion"
+
+      - name: "SQLite"
+        icon: "si si-notion"
+      - name: "PostgreSQL"
+        icon: "si si-postgresql"
+      - name: "Nginx"
+        icon: "si si-nginx"
+
+      - name: "Raspberry Pi"
+        icon: "si si-raspberrypi"
+
   experience:
-    - company: "Company Name"
-      role: "Your Role"
-      period: "Jan 2023 - Present"
+    - company: "Globant (Game Studio)"
+      role: "Game Developer Semi Senior Advance"
+      period: "June 2022 - February 2025"
       logo: "/images/company/logo.png"
-      description: "Brief description of your role and responsibilities."
+      description: "Delivered 200+ improvements and fixes for Zynga's Harry Potter: Puzzles and Spells (Unity), directly impacting revenue growth through 15+ monetizable features, while developing multiple Unreal Engine training projects, demonstrating strong time management and dedication to skill development"
       responsibilities:
-        - "Responsibility 1 with specific achievements"
-        - "Responsibility 2 with specific achievements"
-        - "Responsibility 3 with specific achievements"
+        - "Developed and polished multiple Unreal Engine training projects (FPS Prototype, Door Quest, Friend HUD, and Mystica), using Blueprints and C++, alongside previous project work, demonstrating strong time management and dedication to skill development"
+        - "Delivered 200+ high-quality improvements and bug fixes in Unity, with C#, for Zynga’s Harry Potter: Puzzles and Spells, directly impacting revenue growth through 15+ monetizable features and live events"
+        - "Cooperated with UI, UX, and Tech Art teams to implement 10+ stunning interfaces, while analyzing specs, creating costing docs, and maintaining clear communication to align with Zynga’s goals as an outsourced developer"
+
+    - company: "Fiverr (Seller)"
+      role: "Freelancer Consultant Game Developer"
+      period: "December 2020 - June 2022"
+      logo: "/images/company/logo.png"
+      description: "Developed 5+ complete game titles from scratch and enhanced 30+ existing games through debugging, optimization, and feature additions, while managing deadlines and client communications, resulting in 60+ positive reviews and maintaining a perfect 5-star rating"
+
+    - company: "Compasso UOL"
+      role: "Game Developer Intern"
+      period: "May 2021 - August 2021"
+      description: "Developed multiple game prototypes using Unreal Engine and Unity (links below), showcasing proficiency in Blueprints, Game AI, and C#, while earning praise from instructors for exceptional organization and code implementation efficiency"
 
     # For open source contributions
-    - company: "GitHub"
+    - company: "Open Source Contributor"
       role: "Open Source Contributor"
       period: "Jan 2023 - Present"
       description: "Contributing to open source projects"
-      github_username: "yourusername"
+      github_username: "niscolas"
 
   projects:
-    - title: "Project Name"
-      description: "Brief description of the project and what it does."
-      tech: "Technologies used (e.g., Python, React, TensorFlow)"
-      image: "/images/projects/project.png"
-      link: "https://github.com/yourusername/project"
+    - title: "Zynga's Harry Potter: Puzzles and Spells"
+      description: "Represent your Hogwarts house and celebrate the magic and enchantment of Harry Potter like never before! Prepare to master spells, outsmart challenges, and explore the wonders of the Wizarding World while becoming enchanted by the most marvelous matching puzzles ever found on your mobile device!"
+      tech: "Unity, C#, Git, Game UI, ASP.NET"
+      image: "https://www.zynga.com/storage/2020/03/hpps-hero.png"
+      link: "https://www.zynga.com/games/harry-potter-puzzles-and-spells/"
+    - title: "Legacy of Sin (Franchise)"
+      description: "The Father's Sacrifice is a route defense combined with an epic fantasy storyline straight out of a 90s TV serial. Face an orcish army in a fantasy take on early modern warfare! Deploy your men, hold the line, and defend the kingdom! "
+      tech: "Unity, C#, Fiverr Platform"
+      image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1240790/header.jpg?t=1740434317"
+      link: "https://www.linkedin.com/in/niscolas/overlay/experience/1938730242/multiple-media-viewer?profileId=ACoAACmSfqsBeWvMktnlWbdUNs1FfDsf_XTfJFc&treasuryMediaId=1737220546406&type=LINK&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BIt%2BCAlllRUySV8Iq%2Bt2rEA%3D%3D"
+    - title: "Merge Dolls"
+      description: "Merge Dolls is a fun match 3 online game where you can compete for real prizes!"
+      tech: "Unity, C#, Fiverr Platform"
+      image: "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/17/90/0a/17900a6f-9e49-c1ac-a2f7-b2435deb7dcd/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg"
+      link: "https://apps.apple.com/us/app/merge-dolls-win-real-money/id1583449009"
