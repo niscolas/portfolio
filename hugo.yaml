@@ -6,7 +6,7 @@ theme: ["hugo-noir"]
 params:
   name: "Nícolas Parreiras"
   location: "Contagem, Brazil"
-  description: "Your bio goes here..."
+  description: "Versatile Unity Gameplay Engineer with 5+ years of experience in game development, specializing in Gameplay and UI for Unity/Unreal. Skilled in tooling, Game AI, Testing/Automation, and Linux, with foundational knowledge in Game Art/Tech Art to bridge disciplines and deliver polished, visually stunning results."
   profile_image: "/images/profile.jpg"
 
   # Social Media Links
