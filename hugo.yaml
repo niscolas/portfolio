@@ -135,14 +135,14 @@ params:
         - name: " Unity"
           icon: "si si-unity"
         - name: " C#"
-          icon: ""
+          icon: "devicon-csharp-plain"
         - name: " Git"
           icon: "si si-git"
         - name: " Game UI"
           icon: ""
         - name: " ASP.NET"
           icon: ""
-      image: "https://www.zynga.com/storage/2020/03/hpps-hero.png"
+      image: "/images/harry-potter-puzzles-and-spells.png"
       link: "https://www.zynga.com/games/harry-potter-puzzles-and-spells/"
       available:
           zynga: true
@@ -151,16 +151,93 @@ params:
 
     - title: "Legacy of Sin (Franchise)"
       description: "The Father's Sacrifice is a route defense combined with an epic fantasy storyline straight out of a 90s TV serial. Face an orcish army in a fantasy take on early modern warfare! Deploy your men, hold the line, and defend the kingdom! "
+      techs:
+        - name: " Unity"
+          icon: "si si-unity"
+        - name: " C#"
+          icon: "devicon-csharp-plain"
+        - name: " Fiverr"
+          icon: "si si-fiverr"
       tech: "Unity, C#, Fiverr Platform"
-      image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1240790/header.jpg?t=1740434317"
-      link: "https://www.linkedin.com/in/niscolas/overlay/experience/1938730242/multiple-media-viewer?profileId=ACoAACmSfqsBeWvMktnlWbdUNs1FfDsf_XTfJFc&treasuryMediaId=1737220546406&type=LINK&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BIt%2BCAlllRUySV8Iq%2Bt2rEA%3D%3D"
+      image: "/images/legacy-of-sin.jpg"
+      link: "https://store.steampowered.com/app/1240790/Legacy_of_Sin_The_Father_Sacrifice/"
       available:
           steam: true
 
     - title: "Merge Dolls"
       description: "Merge Dolls is a fun match 3 online game where you can compete for real prizes!"
-      tech: "Unity, C#, Fiverr Platform"
-      image: "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/17/90/0a/17900a6f-9e49-c1ac-a2f7-b2435deb7dcd/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg"
+      image: "/images/merge-dolls.jpg"
       link: "https://apps.apple.com/us/app/merge-dolls-win-real-money/id1583449009"
+      techs:
+        - name: " Unity"
+          icon: "si si-unity"
+        - name: " C#"
+          icon: "devicon-csharp-plain"
+        - name: " Fiverr"
+          icon: "si si-fiverr"
       available:
           appStore: true
+
+    - title: "Friend HUD"
+      description: "A simple and cute project to learn about Unreal's UI and Viewmodel systems"
+      image: "/images/friend-hud.png"
+      link: "https://github.com/niscolas/friend-hud"
+      techs:
+        - name: " Unreal"
+          icon: "si si-unrealengine"
+        - name: " C++"
+          icon: "si si-cplusplus"
+        - name: " Blueprints"
+          icon: "si si-unrealengine"
+      available:
+          github: true
+
+    - title: "Geena: The Tower of Chaos"
+      description: "Conquer the Tower of Chaos floor by floor, slaying a variety of enemies in intense and chaotic battles while avoiding traps and gathering loot - if you manage to survive, of course"
+      image: "/images/geena-heru.jpg"
+      link: "https://gamejolt.com/games/geena/604636"
+      techs:
+        - name: " Unity"
+          icon: "si si-unity"
+        - name: " C#"
+          icon: "devicon-csharp-plain"
+      available:
+          gamejolt: true
+
+    - title: "Best Lost n' Found"
+      description: "Work on a completely normal Lost and Found Network! Trust me, nothing weird happens here, just impatient customers looking for their belongings, ready to throw something in your face. Find what they are looking for (or at least something close to it) while more lost objects arrive at all times."
+      image: "/images/best-lost-n-found.webp"
+      link: "https://gamejolt.com/games/bestlostnfound/604915"
+      techs:
+        - name: " Unity"
+          icon: "si si-unity"
+        - name: " C#"
+          icon: "devicon-csharp-plain"
+      available:
+          gamejolt: true
+
+    - title: "Door Quest"
+      description: "A game with simple Doors and Keys mechanics, made as training for Unreal 5.4"
+      image: "/images/door-quest.png"
+      link: "https://github.com/niscolas/door-quest"
+      techs:
+        - name: " Unreal"
+          icon: "si si-unrealengine"
+        - name: " C++"
+          icon: "si si-cplusplus"
+        - name: " Blueprints"
+          icon: "si si-unrealengine"
+      available:
+          github: true
+
+    - title: "FPS Prototype"
+      description: "This is a project made as a training for Unreal Engine, Blueprints and AI with Behavior Trees"
+      image: "/images/proto-fps.png"
+      link: "https://github.com/niscolas/proto-fps"
+      techs:
+        - name: " Unreal"
+          icon: "si si-unrealengine"
+        - name: " Blueprints"
+          icon: "si si-unrealengine"
+      available:
+          github: true
