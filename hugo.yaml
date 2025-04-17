@@ -131,7 +131,17 @@ params:
   projects:
     - title: "Zynga's Harry Potter: Puzzles and Spells"
       description: "Represent your Hogwarts house and celebrate the magic and enchantment of Harry Potter like never before! Prepare to master spells, outsmart challenges, and explore the wonders of the Wizarding World while becoming enchanted by the most marvelous matching puzzles ever found on your mobile device!"
-      tech: "Unity, C#, Git, Game UI, ASP.NET"
+      techs:
+        - name: " Unity"
+          icon: "si si-unity"
+        - name: " C#"
+          icon: ""
+        - name: " Git"
+          icon: "si si-git"
+        - name: " Game UI"
+          icon: ""
+        - name: " ASP.NET"
+          icon: ""
       image: "https://www.zynga.com/storage/2020/03/hpps-hero.png"
       link: "https://www.zynga.com/games/harry-potter-puzzles-and-spells/"
     - title: "Legacy of Sin (Franchise)"

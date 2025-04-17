@@ -25,10 +25,10 @@
                     {{ .title }}
                 </h3>
                     <div class="hidden md:flex flex-wrap gap-1 md:gap-2 mb-1.5 md:mb-3">
-                        {{ $techs := split .tech "," }} {{ range $tech := $techs }}
+                        {{ range $tech := .techs }}
                         <span
-                            class="px-1.5 md:px-2 py-0.5 bg-black/30 backdrop-blur-sm rounded-md text-[10px] md:text-xs font-medium text-gray-100"
-                            >{{ $tech }}</span
+                            class="{{ $tech.icon }} px-1.5 md:px-2 py-0.5 bg-black/30 backdrop-blur-sm rounded-md text-[10px] md:text-xs font-medium text-gray-100"
+                            >{{ $tech.name }}</span
                         >
                         {{ end }}
                     </div>
