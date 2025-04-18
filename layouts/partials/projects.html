@@ -61,20 +61,20 @@
                 class="absolute inset-0 z-30 px-4 pt-4 pb-0 md:px-6 md:pt-6 flex flex-col justify-end transform transition-transform duration-500 translate-y-0 group-hover:translate-y-[-20px]"
                 >
                 <h3
-                    class="text-xl md:text-2xl font-bold mb-1.5 md:mb-2 text-white line-clamp-2"
+                    class="text-xl md:text-2xl font-bold mb-1.5 md:mb-2 line-clamp-2"
                     >
                     {{ .title }}
                 </h3>
                     <div class="hidden md:flex flex-wrap gap-1 md:gap-2 mb-1.5 md:mb-3">
                         {{ range $tech := .techs }}
                         <span
-                            class="{{ $tech.icon }} px-1.5 md:px-2 py-0.5 bg-black/30 backdrop-blur-sm rounded-md text-[10px] md:text-xs font-medium text-gray-100"
+                            class="{{ $tech.icon }} px-1.5 md:px-2 py-0.5 bg-black/30 backdrop-blur-sm rounded-md text-[10px] md:text-xs font-medium"
                             >{{ $tech.name }}</span
                         >
                         {{ end }}
                     </div>
                             <p
-                            class="hidden md:block text-sm text-gray-300 mb-3 line-clamp-3 md:line-clamp-4"
+                            class="hidden md:block text-sm mb-3 line-clamp-3 md:line-clamp-4"
                             >
                             {{ .description }}
                             </p>

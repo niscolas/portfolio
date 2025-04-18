@@ -22,7 +22,7 @@
     <div class="max-w-6xl mx-auto px-4">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div class="flex justify-between items-center">
-                <a href="{{ .Site.BaseURL }}" class="text-xl font-bold text-white hover:text-gray-300 transition-colors duration-300">
+                <a href="{{ .Site.BaseURL }}" class="text-xl font-bold hover:text-gray-300 transition-colors duration-300">
                     {{ site.Params.name }}
                 </a>
                 <!-- Hamburger menu button for mobile -->
@@ -32,17 +32,10 @@
                     </svg>
                 </button>
             </div>            
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex flex-wrap justify-center items-center gap-4 md:gap-6">
-                <!-- <a href="{{ .Site.BaseURL }}" class="inline-block text-lg text-gray-300 hover:text-white transition-colors duration-300 {{ if .IsHome }}text-white font-semibold{{ end }}">Home</a> -->
-                {{ range .Site.Menus.main }}
-                <a href="{{ .URL | absURL }}" class="inline-block text-lg text-gray-300 hover:text-white transition-colors duration-300 {{ if eq $currentPage.RelPermalink .URL }}text-white font-semibold{{ end }}">{{ .Name }}</a>
-                {{ end }}
-            </nav>
             <div class="hidden md:flex justify-end">
                 <div class="flex items-center">
-                    <span class="text-lg text-gray-300 mr-2">Local Time:</span>
-                    <div id="local-time" class="text-lg text-gray-300"></div>
+                    <span class="text-lg text-gray-400 mr-2">Local Time:</span>
+                    <div id="local-time" class="text-lg text-gray-400"></div>
                 </div>
             </div>
         </div>
