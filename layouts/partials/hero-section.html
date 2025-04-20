@@ -1,5 +1,5 @@
   <section class="mb-16 flex justify-center items-center">
-    <div class="max-w-4xl ml-0 p-4 pb-2 border border-gray-00 rounded-lg shadow-lg relative flex items-center gap-6 h-72">
+    <div class="max-w-4xl ml-0 p-4 border border-gray-00 rounded-lg shadow-lg relative flex items-center gap-6 ">
         {{ $heroImage := resources.Get .Site.Params.profileImage }}
         <img
           src="{{ $heroImage.Permalink }}"
@@ -23,52 +23,14 @@
             {{ .Site.Params.location }}
           </p>
           <p class="text-xl mb-6">{{ .Site.Params.description }}</p>
+
+          <div class="sm:hidden flex flex-row items-center justify-center gap-3">
+            {{ partial "social-icons-content" . }}
+          </div>
         </div>
-     
-      <div
-        class="mt-8 md:mt-0 flex flex-wrap justify-center gap-3 md:absolute md:top-4 md:right-4 md:flex-nowrap md:justify-end md:mt-0"
-      >
 
-          {{ with .Site.Params.cv }}
-          <a
-            href="{{ . }}"
-            class="p-2 rounded-md border border-gray-700 hover:border-gray-500 transition-all flex justify-center items-center"
-          >
-            <i class="ti ti-file-cv-filled text-4xl"></i>
-          </a>
-          {{ end }}
-
-          {{ with .Site.Params.email }}
-          <a
-            href="mailto:{{ . }}"
-            class="p-2 rounded-md border border-gray-700 hover:border-gray-500 transition-all flex justify-center items-center"
-          >
-            <i class="ti ti-mail-filled text-4xl"></i>
-          </a>
-          {{ end }}
-
-        {{ with .Site.Params.github }}
-        <a
-          href="{{ . }}"
-          class="p-2 rounded-md border border-gray-700 hover:border-gray-500 transition-all flex justify-center items-center"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="si si-github text-4xl"></i>
-        </a>
-        {{ end }}
-
-
-          {{ with .Site.Params.linkedin }}
-          <a
-            href="{{ . }}"
-            class="p-2 rounded-md border border-gray-700 hover:border-gray-500 transition-all flex justify-center items-center"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="devicon-linkedin-plain text-4xl"></i>
-          </a>
-          {{ end }}
+      <div class="hidden sm:flex flex flex-col gap-3">
+        {{ partial "social-icons-content" . }}
       </div>
     </div>
   </section>

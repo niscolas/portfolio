@@ -1,0 +1,39 @@
+{{ with .Site.Params.cv }}
+<a
+  href="{{ . }}"
+  class="p-2 rounded-md border border-gray-700 hover:border-gray-500 transition-all flex justify-center items-center"
+>
+  <i class="ti ti-file-cv-filled text-4xl"></i>
+</a>
+{{ end }}
+
+{{ with .Site.Params.email }}
+<a
+  href="mailto:{{ . }}"
+  class="p-2 rounded-md border border-gray-700 hover:border-gray-500 transition-all flex justify-center items-center"
+>
+  <i class="ti ti-mail-filled text-4xl"></i>
+</a>
+{{ end }}
+
+{{ with .Site.Params.github }}
+<a
+  href="{{ . }}"
+  class="p-2 rounded-md border border-gray-700 hover:border-gray-500 transition-all flex justify-center items-center"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <i class="si si-github text-4xl"></i>
+</a>
+{{ end }}
+
+{{ with .Site.Params.linkedin }}
+<a
+  href="{{ . }}"
+  class="p-2 rounded-md border border-gray-700 hover:border-gray-500 transition-all flex justify-center items-center"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <i class="devicon-linkedin-plain text-4xl"></i>
+</a>
+{{ end }}
