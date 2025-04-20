@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
         
-        <!-- Favicon here-->
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}favicon_io/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}favicon_io/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}favicon_io/favicon-16x16.png">
+        {{ $favicon := resources.Get "/images/favicon.png" }}
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ $favicon.Permalink }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ $favicon.Permalink }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ $favicon.Permalink }}">
         <link rel="manifest" href="{{ .Site.BaseURL }}favicon_io/site.webmanifest">        
         <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
         <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" as="style">
@@ -106,7 +106,6 @@
         </style>
     </head>
     <body class="min-h-screen">
-        {{ partial "header" . }}
         <main>
             {{ block "main" . }}{{ end }}
         </main>
