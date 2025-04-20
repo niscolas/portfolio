@@ -25,42 +25,11 @@
                 <a href="{{ .Site.BaseURL }}" class="text-xl font-bold hover:text-gray-300 transition-colors duration-300">
                     {{ site.Params.name }}
                 </a>
-                <!-- Hamburger menu button for mobile -->
-                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>            
+            </div>
             <div class="hidden md:flex justify-end">
                 <div class="flex items-center">
                     <span class="text-lg text-gray-400 mr-2">Local Time:</span>
                     <div id="local-time" class="text-lg text-gray-400"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Mobile Navigation Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden transition-all duration-300">
-        <div class="flex flex-col h-full">
-            <div class="flex justify-between items-center p-6 border-b border-gray-800">
-                <span class="text-xl font-bold text-white">Menu</span>
-                <button id="mobile-menu-close" class="text-gray-300 hover:text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <nav class="flex flex-col p-6 space-y-4">
-                {{ range .Site.Menus.main }}
-                <a href="{{ .URL | absURL }}" class="text-xl text-gray-300 hover:text-white transition-colors duration-300 {{ if eq $currentPage.RelPermalink .URL }}text-white font-semibold{{ end }}">{{ .Name }}</a>
-                {{ end }}
-            </nav>
-            <div class="mt-auto p-6 border-t border-gray-800">
-                <div class="flex items-center justify-center">
-                    <span class="text-lg text-gray-300 mr-2">Local Time:</span>
-                    <div id="mobile-local-time" class="text-lg text-gray-300"></div>
                 </div>
             </div>
         </div>
@@ -81,33 +50,6 @@
     }
     updateLocalTime();
     setInterval(updateLocalTime, 1000);
-
-    // Mobile menu functionality
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenuClose = document.getElementById('mobile-menu-close');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    function toggleMobileMenu() {
-        const isHidden = mobileMenu.classList.contains('hidden');
-        if (isHidden) {
-            mobileMenu.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
-        } else {
-            mobileMenu.classList.add('hidden');
-            document.body.style.overflow = ''; // Restore scrolling
-        }
-    }
-
-    mobileMenuButton.addEventListener('click', toggleMobileMenu);
-    mobileMenuClose.addEventListener('click', toggleMobileMenu);
-
-    // Close menu when clicking on a link
-    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-    mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            toggleMobileMenu();
-        });
-    });
 
     // Only try to access theme toggle elements if they exist
     const themeToggleBtn = document.getElementById('theme-toggle');
