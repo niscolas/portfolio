@@ -5,101 +5,81 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mx-auto">
         {{ range .Site.Params.projects }}
         <div class="project-card relative overflow-hidden rounded-lg bg-[#121212] border border-gray-700 transition-all duration-300 group h-96">
-            <div class="aspect-w-16 aspect-h-9 overflow-hidden relative h-96">
+            <a href="{{ .link }}" class="block h-full">
+                <div class="aspect-w-16 aspect-h-9 overflow-hidden relative h-96">
+                    {{ $image := resources.Get .image }}
+                    <img
+                    src="{{ $image.Permalink }}"
+                    alt="{{ .title }}"
+                    class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent opacity-100 z-20"></div>
 
-                {{ $image := resources.Get .image }}
-                <img
-                src="{{ $image.Permalink }}"
-                alt="{{ .title }}"
-                class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent opacity-100 z-20"></div>
+                    <div class="absolute top-4 left-4 z-30 flex gap-4 p-2 shadow-md rounded-lg bg-black/60 backdrop-blur-sm">
+                        {{ if .available.zynga }}
+                        <img src="https://uwg-farm2-staging.cdn.zynga.com/production/431f86e/assets/zyngalogo.png"
+                            alt="Zynga" 
+                            class="w-6 h-6 md:w-12 md:h-12">
+                        {{ end }}
 
-                <!-- New area for icons -->
-                <div class="absolute top-6 left-6 z-30 flex gap-4 p-2 shadow-md rounded-lg bg-black/60 backdrop-blur-sm">
-                    {{ if .available.zynga }}
-                    <img src="https://uwg-farm2-staging.cdn.zynga.com/production/431f86e/assets/zyngalogo.png"
-                        alt="Zynga" 
-                        class="w-6 h-6 md:w-12 md:h-12">
-                    {{ end }}
+                        {{ if .available.playStore }}
+                        <img src="https://static.vecteezy.com/system/resources/previews/022/613/026/original/google-play-store-icon-logo-symbol-free-png.png"
+                            alt="Play Store" 
+                            class="w-6 h-6 md:w-12 md:h-12">
+                        {{ end }}
 
-                    {{ if .available.playStore }}
-                    <img src="https://static.vecteezy.com/system/resources/previews/022/613/026/original/google-play-store-icon-logo-symbol-free-png.png"
-                        alt="Play Store" 
-                        class="w-6 h-6 md:w-12 md:h-12">
-                    {{ end }}
+                        {{ if .available.appStore }}
+                        <img src="https://cdn-icons-png.flaticon.com/512/5977/5977575.png"
+                            alt="App Store" 
+                            class="w-6 h-6 md:w-12 md:h-12">
+                        {{ end }}
 
-                    {{ if .available.appStore }}
-                    <img src="https://cdn-icons-png.flaticon.com/512/5977/5977575.png"
-                        alt="App Store" 
-                        class="w-6 h-6 md:w-12 md:h-12">
-                    {{ end }}
+                        {{ if .available.steam }}
+                        <img src="https://cdn-icons-png.flaticon.com/512/15466/15466225.png"
+                            alt="Steam" 
+                            class="w-6 h-6 md:w-12 md:h-12">
+                        {{ end }}
 
-                    {{ if .available.steam }}
-                    <img src="https://cdn-icons-png.flaticon.com/512/15466/15466225.png"
-                        alt="Steam" 
-                        class="w-6 h-6 md:w-12 md:h-12">
-                    {{ end }}
+                        {{ if .available.gamejolt }}
+                        <img src="https://img.icons8.com/fluency/512/game-jolt.png" 
+                            alt="GameJolt" 
+                            class="w-6 h-6 md:w-12 md:h-12">
+                        {{ end }}
 
-                    {{ if .available.gamejolt }}
-                    <img src="https://img.icons8.com/fluency/512/game-jolt.png" 
-                        alt="GameJolt" 
-                        class="w-6 h-6 md:w-12 md:h-12">
-                    {{ end }}
-
-                    {{ if .available.github }}
-                    {{ $githubLogo := resources.Get "/images/github.png" }}
-                    <img src="{{ $githubLogo.Permalink }}" 
-                        alt="GitHub" 
-                        class="w-6 h-6 md:w-12 md:h-12">
-                    {{ end }}
-                </div>
-
-
-                <div
-                class="absolute inset-0 z-30 p-4 md:pb-0 md:px-6 md:pt-6 flex flex-col justify-end transform transition-transform duration-500 translate-y-0 group-hover:translate-y-[-20px]"
-                >
-                <h3
-                    class="text-xl md:text-2xl font-bold mb-1.5 md:mb-2 line-clamp-2"
-                    >
-                    {{ .title }}
-                </h3>
-                    <div class="hidden md:flex flex-wrap gap-1 md:gap-2 mb-1.5 md:mb-3">
-                        {{ range $tech := .techs }}
-                        <span
-                            class="{{ $tech.icon }} px-1.5 md:px-2 py-0.5 bg-black/30 backdrop-blur-sm rounded-md text-[10px] md:text-xs font-medium"
-                            >{{ $tech.name }}</span
-                        >
+                        {{ if .available.github }}
+                        {{ $githubLogo := resources.Get "/images/github.png" }}
+                        <img src="{{ $githubLogo.Permalink }}" 
+                            alt="GitHub" 
+                            class="w-6 h-6 md:w-12 md:h-12">
                         {{ end }}
                     </div>
-                            <p
-                            class="hidden md:block text-sm mb-3 line-clamp-3 md:line-clamp-4"
-                            >
-                            {{ .description }}
-                            </p>
-
-                <a
-                    href="{{ .link }}"
-                    class="bg-white/90 backdrop-blur-sm md:scale-0 group-hover:scale-100 hover:bg-white text-black text-xs md:text-sm font-medium py-1 md:py-1.5 px-2 md:px-3 rounded-md inline-block transition-all duration-300 transform opacity-100 md:opacity-0 group-hover:opacity-100 w-fit flex items-center shadow-lg hover:shadow-xl"
+                    
+                    <div
+                    class="absolute inset-0 z-30 p-4 md:px-4 flex flex-col justify-end transform transition-transform duration-500 translate-y-0 group-hover:translate-y-[-20px]"
                     >
-                    Learn More
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-3.5 w-3.5 ml-1 transform group-hover:translate-x-1 transition-transform duration-200"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
+                    <h3
+                        class="text-xl md:text-2xl font-bold mb-1.5 md:mb-2 line-clamp-2"
                         >
-                        <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        />
-                    </svg>
-                </a>
-            </div>
-            </div>
+                        {{ .title }}
+                    </h3>
+                        <div class="hidden md:flex flex-wrap gap-1 md:gap-2 mb-1.5 md:mb-3">
+                            {{ range $tech := .techs }}
+
+                            <div class="border border-secondary gap-2 flex px-1.5 md:px-2 py-0.5 bg-black/30 backdrop-blur-sm rounded-md text-[10px] md:text-sm font-medium items-center">
+                                <p class="{{ $tech.icon }}"></p>
+                                <p>{{ $tech.name }} </p>
+                            </div>
+
+                            {{ end }}
+                        </div>
+                                <p
+                                class="hidden md:block text-sm mb-3 line-clamp-3 md:line-clamp-4"
+                                >
+                                {{ .description }}
+                                </p>
+                    </div>
+                </div>
+            </a>
         </div>
         {{ end }}
         <!-- <div class="flex justify-center mt-4 md:mt-8"> -->
