@@ -26,22 +26,15 @@
   }
 </style>
 
-<div class="w-full mx-auto">
+<div class="pixel-bg w-full px-14 py-12">
 
-  <div class="pixel-bg px-14 py-12">
-    {{ partial "hero-section" . }}
-
-    <div class="w-full md:w-4/5 lg:w-4/5 mx-auto color-black">
-      {{ partial "tech-stack" . }}
-    </div>
-  </div>
-
-  <div class="w-full md:w-4/5 lg:w-4/5 mx-auto px-14">
-    {{ partial "projects" . }}
-    {{ partial "experience" . }}
-  </div>
+  <div class="mb:w-4/5 lg:w-4/5 mx-auto">
+  {{ partial "hero-section" . }}
+  {{ partial "tech-stack" . }}
+  {{ partial "projects" . }}
+  {{ partial "experience" . }}
   <!-- {{ partial "blog" . }} -->
-
+  </div>
 </div>
 
 <style>
