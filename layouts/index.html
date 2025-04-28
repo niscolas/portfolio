@@ -17,12 +17,29 @@
   />
   </head>
 
-<div class="w-full md:w-4/5 lg:w-4/5 mx-auto px-14 py-12">
+<style>
+  .pixel-bg {
+    background-image: url('https://images.alphacoders.com/958/thumb-1920-958190.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+</style>
 
-  {{ partial "hero-section" . }}
-  {{ partial "tech-stack" . }}
-  {{ partial "projects" . }}
-  {{ partial "experience" . }}
+<div class="w-full mx-auto">
+
+  <div class="pixel-bg px-14 py-12">
+    {{ partial "hero-section" . }}
+
+    <div class="w-full md:w-4/5 lg:w-4/5 mx-auto color-black">
+      {{ partial "tech-stack" . }}
+    </div>
+  </div>
+
+  <div class="w-full md:w-4/5 lg:w-4/5 mx-auto px-14">
+    {{ partial "projects" . }}
+    {{ partial "experience" . }}
+  </div>
   <!-- {{ partial "blog" . }} -->
 
 </div>
