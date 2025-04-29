@@ -2,7 +2,7 @@
   <h2 class="text-4xl font-bold mb-8 relative flex items-center"><i class="ti ti-flask-2-filled mr-2"></i> Experience</h2>
 
   <div class="flex items-center mb-4">
-    <div class="flex-grow space-y-8 max-w-4xl mx-auto">
+    <div class="flex-grow space-y-8 px-8  mx-auto">
       {{ range $index, $exp := .Site.Params.experience }}
       <div
         class="flex items-start relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:w-[2px] before:h-full before:bg-gray-700 before:rounded-full"
@@ -17,7 +17,8 @@
           ></div>
         {{ end }}
 
-        <img src="{{ .logoUrl }}" alt="{{ .company }} logo" class="w-16 h-16 object-contain mr-4 {{ if .addLogoBg }}rounded-md bg-[#504945] p-2{{ end }}" />
+        {{ $logo := resources.Get .logo }}
+        <img src="{{ $logo.Permalink }}" alt="{{ .company }} logo" class="w-24 h-24 object-contain mr-4 {{ if .addLogoBg }}rounded-md bg-[#504945] p-2{{ end }}" />
         <div>
           <h3 class="text-secondary text-xl">{{ .company }}</h3>
           <p class="text-2xl font-semibold">{{ .role }}</p>
