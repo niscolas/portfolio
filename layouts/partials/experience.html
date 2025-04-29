@@ -1,24 +1,32 @@
-  <section class="fade-in delay-3 opacity-0 bg-[#1d2021] bg-opacity-95 rounded-lg p-8">
-    <h2 class="text-4xl font-bold mb-8 relative flex items-center"><i class="ti ti-flask-2-filled mr-2"></i> Experience</h2>
-    <div class="space-y-8 max-w-4xl mx-auto">
+<section class="fade-in delay-3 opacity-0 bg-[#1d2021] bg-opacity-95 rounded-lg p-8 pb-16">
+  <h2 class="text-4xl font-bold mb-8 relative flex items-center"><i class="ti ti-flask-2-filled mr-2"></i> Experience</h2>
+
+  <div class="flex items-center mb-4">
+    <div class="flex-grow space-y-8 max-w-4xl mx-auto">
       {{ range $index, $exp := .Site.Params.experience }}
       <div
-        class="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:w-[2px] before:h-full before:bg-gray-700 before:rounded-full"
-      >
+        class="flex items-start relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:w-[2px] before:h-full before:bg-gray-700 before:rounded-full"
+        >
         {{ if eq .company "Open Source Contributor" }}
         <div
           class="absolute -left-1.5 top-0 w-3 h-3 bg-[#121212] border border-blue-400 rounded-full"
-        ></div>
+          ></div>
         {{ else }}
         <div
           class="absolute -left-1.5 top-0 w-2 h-2 bg-gray-700 rounded-full"
-        ></div>
+          ></div>
         {{ end }}
-        <h3 class="text-secondary text-xl">{{ .company }}</h3>
-        <p class="text-2xl font-semibold">{{ .role }}</p>
-        <p class="text-secondary text-sm">{{ .period }}</p>
-        <p class="mt-2">{{ .description }}</p>
+
+        <img src="{{ .logoUrl }}" alt="{{ .company }} logo" class="w-16 h-16 object-contain mr-4" />
+        <div>
+          <h3 class="text-secondary text-xl">{{ .company }}</h3>
+          <p class="text-2xl font-semibold">{{ .role }}</p>
+          <p class="text-secondary text-sm">{{ .period }}</p>
+          <p class="mt-2">{{ .description }}</p>
+        </div>
       </div>
       {{ end }}
     </div>
-  </section>
+  </div>
+
+</section>

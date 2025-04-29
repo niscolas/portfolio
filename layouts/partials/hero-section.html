@@ -1,43 +1,43 @@
 <section class="mb-16 flex justify-center items-center">
-    <div class="bg-opacity-95 bg-[#1d2021] opacity-0 fade-in max-w-5xl ml-0 px-8 py-4 border border-gray-00 rounded-lg shadow-lg relative flex items-center gap-6 ">
-        {{ $heroImage := resources.Get .Site.Params.profileImage }}
-        <img
-          src="{{ $heroImage.Permalink }}"
-          alt="Hero Image"
-          class="w-36 h-45 rounded-lg border border-gray-00 shadow-lg hidden sm:block"
+  <div class="bg-opacity-95 bg-[#1d2021] opacity-0 fade-in max-w-5xl ml-0 px-8 py-4 border border-gray-00 rounded-lg shadow-lg relative flex items-center gap-6 ">
+    {{ $heroImage := resources.Get .Site.Params.profileImage }}
+    <img
+    src="{{ $heroImage.Permalink }}"
+    alt="Hero Image"
+    class="w-36 h-45 rounded-lg border border-gray-00 shadow-lg hidden sm:block"
+    />
+    <div class="text-left">
+
+      <p class="text-secondary text-xl mb-1">Professional Game Developer</p>
+
+      <h1 class="text-4xl font-bold mb-1">{{ .Site.Params.name }}</h1>
+      <p class="text-secondary mb-5 flex items-center text-xl">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="-7 -2 24 24"
+        >
+        <path
+        fill="#a89984"
+        d="M4 9.9A5.002 5.002 0 0 1 5 0a5 5 0 0 1 1 9.9V19a1 1 0 0 1-2 0V9.9zM5 8a3 3 0 1 0 0-6a3 3 0 0 0 0 6z"
         />
-        <div class="text-left">
+      </svg>
 
-        <p class="text-secondary text-xl mb-1">Professional Game Developer</p>
-      
-          <h1 class="text-4xl font-bold mb-1">{{ .Site.Params.name }}</h1>
-          <p class="text-secondary mb-5 flex items-center text-xl">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="-7 -2 24 24"
-            >
-              <path
-                fill="#a89984"
-                d="M4 9.9A5.002 5.002 0 0 1 5 0a5 5 0 0 1 1 9.9V19a1 1 0 0 1-2 0V9.9zM5 8a3 3 0 1 0 0-6a3 3 0 0 0 0 6z"
-              />
-            </svg>
+        {{ .Site.Params.location }}
+      </p>
+      <p class="text-xl mb-5">{{ .Site.Params.description }}</p>
 
-            {{ .Site.Params.location }}
-          </p>
-          <p class="text-xl mb-5">{{ .Site.Params.description }}</p>
+      <p class="text-lg rounded-lg border border-gray-00 shadow-lg inline-block rounded-full px-2 py-1 text-sm font-bold mr-2">English (C1+ / Advanced)</p>
+      <p class="text-lg rounded-lg border border-gray-00 shadow-lg inline-block rounded-full px-2 py-1 text-sm font-bold mr-2">Brazilian Portuguese (C2 / Native)</p>
 
-          <p class="text-lg rounded-lg border border-gray-00 shadow-lg inline-block rounded-full px-2 py-1 text-sm font-bold mr-2">English (C1+ / Advanced)</p>
-          <p class="text-lg rounded-lg border border-gray-00 shadow-lg inline-block rounded-full px-2 py-1 text-sm font-bold mr-2">Brazilian Portuguese (C2 / Native)</p>
-
-          <div class="sm:hidden flex flex-row items-center justify-center gap-3">
-            {{ partial "social-icons-content" . }}
-          </div>
-        </div>
-
-      <div class="hidden sm:flex flex flex-col gap-3">
+      <div class="sm:hidden flex flex-row items-center justify-center gap-3">
         {{ partial "social-icons-content" . }}
       </div>
     </div>
-  </section>
+
+    <div class="hidden sm:flex flex flex-col gap-3">
+      {{ partial "social-icons-content" . }}
+    </div>
+  </div>
+</section>
