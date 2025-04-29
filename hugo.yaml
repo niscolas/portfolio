@@ -126,6 +126,7 @@ params:
       logo: "/images/company/logo.png"
       description: "Delivered 200+ improvements and fixes for Zynga's Harry Potter: Puzzles and Spells (Unity), directly impacting revenue growth through 15+ monetizable features, while developing multiple Unreal Engine training projects, demonstrating strong time management and dedication to skill development"
       logoUrl: "https://companieslogo.com/img/orig/GLOB-13857c80.png?t=1632767128&download=true"
+      addLogoBg: true
       responsibilities:
         - "Developed and polished multiple Unreal Engine training projects (FPS Prototype, Door Quest, Friend HUD, and Mystica), using Blueprints and C++, alongside previous project work, demonstrating strong time management and dedication to skill development"
         - "Delivered 200+ high-quality improvements and bug fixes in Unity, with C#, for Zynga’s Harry Potter: Puzzles and Spells, directly impacting revenue growth through 15+ monetizable features and live events"
@@ -143,6 +144,7 @@ params:
       period: "May 2021 - August 2021"
       description: "Developed multiple game prototypes using Unreal Engine and Unity (links below), showcasing proficiency in Blueprints, Game AI, and C#, while earning praise from instructors for exceptional organization and code implementation efficiency"
       logoUrl: "https://logodownload.org/wp-content/uploads/2018/09/uol-logo-5-2048x732.png"
+      addLogoBg: true
 
     # For open source contributions
     - company: "Open Source Contributor"
