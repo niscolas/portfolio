@@ -123,30 +123,50 @@ params:
     - company: "Globant (Game Studio)"
       role: "Game Developer Semi Senior Advance"
       period: "June 2022 - February 2025"
-      description: "Delivered 200+ improvements and fixes for Zynga's Harry Potter: Puzzles and Spells (Unity), directly impacting revenue growth through 15+ monetizable features, while developing multiple Unreal Engine training projects, demonstrating strong time management and dedication to skill development"
+      description:
+        - "• Developed and polished multiple Unreal Engine training projects (FPS Prototype, Door Quest, Friend HUD, and Mystica), using Blueprints and C++, alongside previous project work, demonstrating strong time management and dedication to skill development"
+        - "• Delivered 200+ high-quality improvements and bug fixes in Unity, with C#, for Zynga’s Harry Potter: Puzzles and Spells (20M+downloads), directly impacting revenue growth through 15+ monetizable features and live events"
+        - "• Cooperated with UI/UX, and Art teams to implement 10+ stunning interfaces, while analyzing specs, creating costing docs, and maintaining clear communication to align with Zynga’s goals as an outsourced developer"
       logo: "/images/globant.png"
-      responsibilities:
-        - "Developed and polished multiple Unreal Engine training projects (FPS Prototype, Door Quest, Friend HUD, and Mystica), using Blueprints and C++, alongside previous project work, demonstrating strong time management and dedication to skill development"
-        - "Delivered 200+ high-quality improvements and bug fixes in Unity, with C#, for Zynga’s Harry Potter: Puzzles and Spells, directly impacting revenue growth through 15+ monetizable features and live events"
-        - "Cooperated with UI, UX, and Tech Art teams to implement 10+ stunning interfaces, while analyzing specs, creating costing docs, and maintaining clear communication to align with Zynga’s goals as an outsourced developer"
+
 
     - company: "Fiverr (Seller)"
       role: "Freelancer Consultant Game Developer"
       period: "December 2020 - June 2022"
-      description: "Developed 5+ complete game titles from scratch and enhanced 30+ existing games through debugging, optimization, and feature additions, while managing deadlines and client communications, resulting in 60+ positive reviews and maintaining a perfect 5-star rating"
+      description:
+        - "• Developed 5+ complete game titles (e.g., Merge Dolls) from scratch and enhanced 30+ existing ones (e.g., Legacy of Sin: The Father Sacrifice) by debugging, optimizing performance, and adding new features"
+        - "• Built a strong reputation on the platform by ensuring timely delivery, earning 60+ positive reviews from satisfied buyers and a solid 5-star rating"
+        - "• Managed deadlines, estimates, and direct communication with 40+ clients, while addressing feedback to meet requirements"
       logo: "/images/fiverr.png"
 
     - company: "Compasso UOL"
       role: "Game Developer Intern"
       period: "May 2021 - August 2021"
-      description: "Developed multiple game prototypes using Unreal Engine and Unity (links below), showcasing proficiency in Blueprints, Game AI, and C#, while earning praise from instructors for exceptional organization and code implementation efficiency"
+      description:
+        - "• Developed 2 game prototypes using Unreal Engine (FPS Prototype) and Unity (Inventory Prototype), showcasing proficiency in Blueprints, Game AI, and C#"
+        - "• Praised by instructors/contractors for exceptional organization and efficiency in Blueprints and C# implementation"
       logo: "/images/compass_uol.png"
 
-    # For open source contributions
+    - company: "Minas Educa"
+      role: "App Developer Freelancer"
+      period: "December 2019 – April 2020"
+      description:
+        - "• Developed an Educational Quiz App using Vue.js and the Quasar Framework"
+      logo: "/images/minas_educa.webp"
+
+    - company: "2x3: Inteligência Digital"
+      role: "Software Developer Intern"
+      period: "February 2019 – January 2020"
+      description:
+        - "• Delivered 100+ bug fixes and improvements across 5+ full-stack projects using Java, PHP, and Ruby on Rails"
+        - "• Managed Linux servers with Apache and databases via SSH, managing multiple PostgreSQL/MySQL while providing direct Help Desk support, solving 20+ tickets"
+      logo: "/images/2x3.png"
+
     - company: "Open Source Contributor"
       role: "Open Source Contributor"
-      period: "Jan 2023 - Present"
-      description: "Contributing to open source projects"
+      period: "Jan 2020 - Present"
+      description:
+        - "Contributing to open source projects"
       github_username: "niscolas"
       logo: "/images/github.png"
 

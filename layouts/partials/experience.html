@@ -22,8 +22,12 @@
         <div>
           <h3 class="text-secondary text-xl">{{ .company }}</h3>
           <p class="text-2xl font-semibold">{{ .role }}</p>
-          <p class="text-secondary text-sm">{{ .period }}</p>
-          <p class="mt-2">{{ .description }}</p>
+
+            <p class="text-secondary text-sm">{{ .period }}</p>
+            {{ range .description }}
+              <p class="mt-2">{{ . }}</p>
+            {{ end }}
+      
         </div>
       </div>
       {{ end }}
