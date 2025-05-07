@@ -1,4 +1,4 @@
-# ✨ My Portfolio Site ✨
+# ✨ My Game Dev Portfolio Webite ✨
 
 > 💡 This is the source for my portfolio site, built with Hugo
 
