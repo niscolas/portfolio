@@ -171,6 +171,21 @@ params:
       logo: "/images/github.png"
 
   projects:
+    - title: "Flawless Abbey"
+      description: "You are a dreamseeker. At least, that's what she wants you to believe. Play every role, open every door, and delve into cosmic debates with dolls that seem to know far more than they should. But remember, above all - don't break her heart."
+      techs:
+        - name: " Unreal"
+          icon: "si si-unrealengine"
+        - name: " C++"
+          icon: "si si-cplusplus"
+        - name: " Blueprints"
+          icon: "si si-unrealengine"
+      tech: "Unreal, C++, Blueprints"
+      image: "/images/flawless-abbey.jpg"
+      link: "https://store.steampowered.com/app/1575790/Flawless_Abbey/"
+      available:
+          steam: true
+
     - title: "Zynga's Harry Potter: Puzzles and Spells"
       description: "Prepare to master spells, outsmart challenges, and explore the wonders of the Wizarding World while becoming enchanted by the most marvelous matching puzzles."
       techs:
